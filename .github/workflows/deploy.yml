@@ -31,8 +31,7 @@ jobs:
 
           if [ -z "$EXISTING_JOBS" ]; then
             echo "No pending or running jobs. Starting a new build."
-            aws amplify start-job --app-id $AMPLIFY_APP_ID --branch-name main --job-type RELEASE \
-              --environment-variables "{\"APPSYNC_GRAPHQL_ENDPOINT\":\"$APPSYNC_GRAPHQL_ENDPOINT\",\"APPSYNC_API_KEY\":\"$APPSYNC_API_KEY\"}"
+            aws amplify start-job --app-id $AMPLIFY_APP_ID --branch-name main --job-type RELEASE
           else
             echo "There are pending or running jobs. Skipping new build."
             echo "Existing jobs:"
