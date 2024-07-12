@@ -57,7 +57,31 @@ npm run build
 
 2. Prepare the github repository and set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` at github secret.
 
+   ```
+    AWS Console :
+      - Goto AWS IAM Console
+      - Select User name
+      - Security Credentials
+      - Create Access Keys
+      - Copy Paste the value of `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`
+
+    Github
+      Settings -> Security -> Secrets and variables -> Actions 
+      Create New Repository secrets for
+      - `AWS_ACCESS_KEY_ID`
+      - `AWS_SECRET_ACCESS_KEY`
+   ```
+
 3. Generate (classic) Github Auth Token
+
+   ```
+   Github
+    Click Picture Profile
+    Settings -> Developer Settings
+    Personal Access Tokens -> Tokens (classic)
+    Generate new token (classic)
+    Copy Paste the value of `GITHUB_AUTH_TOKEN`
+   ```
 
 4. Create a Cloud Formation stack by provide the `GITHUB_AUTH_TOKEN` value
 
