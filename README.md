@@ -101,3 +101,7 @@ npm run build
      git branch -M main
      git push -u origin main
    ```
+
+6. Goto `https://us-east-1.console.aws.amazon.com/amplify/apps/d2lde6f78mp8a0/overview`. Adjustment required for the region and apps id
+
+7. 

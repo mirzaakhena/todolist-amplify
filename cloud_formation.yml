@@ -271,8 +271,6 @@ Resources:
     Type: AWS::Amplify::App
     Properties:
       Name: !Ref AmplifyAppName
-      Repository: !Sub https://github.com/${GitHubOwner}/${GitHubRepo}
-      OauthToken: !Ref GitHubOAuthToken
       BuildSpec: |-
         version: 1
         frontend:
