@@ -1,0 +1,22 @@
+aws cloudformation create-stack --stack-name TodoListStack --template-body file://cloud_formation.yml --capabilities CAPABILITY_IAM
+aws cloudformation update-stack --stack-name TodoListStack --template-body file://cloud_formation.yml --capabilities CAPABILITY_IAM
+aws cloudformation delete-stack --stack-name TodoListStack
+aws cloudformation describe-stacks --stack-name TodoListStack
+aws cloudformation validate-template --template-body file://cloud_formation.yml
+
+
+aws cloudformation create-stack \
+  --stack-name TodoListStack \
+  --template-body file://cloud_formation.yml \
+  --parameters \
+    ParameterKey=GitHubOAuthToken,ParameterValue=GITHUB_AUTH_TOKEN \
+  --capabilities CAPABILITY_IAM
+
+
+aws cloudformation update-stack \
+  --stack-name TodoListStack \
+  --template-body file://cloud_formation.yml \
+  --parameters \
+    ParameterKey=GitHubOAuthToken,ParameterValue=GITHUB_AUTH_TOKEN \
+  --capabilities CAPABILITY_IAM  
+

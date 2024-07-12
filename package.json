@@ -1,0 +1,19 @@
+{
+  "name": "todolist2-vue",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "prebuild": "node generate-config.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "aws-amplify": "^6.3.8",
+    "dotenv": "^16.4.5",
+    "vite": "^5.3.1",
+    "vue": "^3.4.29"
+  }
+}
